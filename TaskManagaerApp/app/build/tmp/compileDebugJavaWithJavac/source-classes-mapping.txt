@@ -1,0 +1,18 @@
+com/example/roomlecture/TaskDatabase_Impl.java
+ com.example.roomlecture.TaskDatabase_Impl
+ com.example.roomlecture.TaskDatabase_Impl$1
+com/example/roomlecture/TaskDetailDao_Impl.java
+ com.example.roomlecture.TaskDetailDao_Impl
+ com.example.roomlecture.TaskDetailDao_Impl$1
+ com.example.roomlecture.TaskDetailDao_Impl$2
+ com.example.roomlecture.TaskDetailDao_Impl$3
+ com.example.roomlecture.TaskDetailDao_Impl$4
+ com.example.roomlecture.TaskDetailDao_Impl$5
+ com.example.roomlecture.TaskDetailDao_Impl$6
+ com.example.roomlecture.TaskDetailDao_Impl$7
+com/example/roomlecture/BuildConfig.java
+ com.example.roomlecture.BuildConfig
+com/example/roomlecture/TaskListDao_Impl.java
+ com.example.roomlecture.TaskListDao_Impl
+ com.example.roomlecture.TaskListDao_Impl$1
+ com.example.roomlecture.TaskListDao_Impl$2
