@@ -1,4 +1,4 @@
-package com.example.taskmanager
+package com.example.taskmanager.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

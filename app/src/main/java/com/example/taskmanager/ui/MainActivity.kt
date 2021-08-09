@@ -1,7 +1,8 @@
-package com.example.taskmanager
+package com.example.taskmanager.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.taskmanager.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

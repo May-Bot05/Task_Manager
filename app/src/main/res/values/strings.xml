@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoomLecture</string>
+    <string name="app_name">Task Manager</string>
 
     <string name="save_task">Save</string>
     <string name="delete_task">Delete</string>

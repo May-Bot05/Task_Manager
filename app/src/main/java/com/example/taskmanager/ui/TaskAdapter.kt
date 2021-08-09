@@ -1,4 +1,4 @@
-package com.example.taskmanager
+package com.example.taskmanager.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,14 +7,20 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.taskmanager.R
+import com.example.taskmanager.data.PriorityLevel
+import com.example.taskmanager.data.Task
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.fragment_task_detail.*
+import kotlinx.android.synthetic.main.list_item.task_priority_list_item
+import kotlinx.android.synthetic.main.list_item.*
 
 class TaskAdapter(private val listener: (Long) -> Unit):
-    ListAdapter<Task, TaskAdapter.ViewHolder>(DiffCallback()){
+    ListAdapter<Task, TaskAdapter.ViewHolder>(
+        DiffCallback()
+    ){
 
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): TaskAdapter.ViewHolder {
+                                    viewType: Int): ViewHolder {
         val itemLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
 
@@ -34,22 +40,26 @@ class TaskAdapter(private val listener: (Long) -> Unit):
         }
 
         fun bind(task: Task){
-            with(task){
-                when(task.taskPriority){
-                    PriorityLevel.High.ordinal ->{
-                        task_priority.setBackgroundColor(
-                            ContextCompat.getColor(containerView.context, R.color.colorPriorityHigh))
-                    }
-                    PriorityLevel.Medium.ordinal ->{
-                        task_priority.setBackgroundColor(
-                            ContextCompat.getColor(containerView.context, R.color.colorPriorityMedium))
-                    }
-                    else ->  task_priority.setBackgroundColor(
-                        ContextCompat.getColor(containerView.context, R.color.colorPriorityLow))
+            when(task.taskPriority){
+                PriorityLevel.High.ordinal ->{
+                    task_priority_list_item.setBackgroundColor(
+                        ContextCompat.getColor(containerView.context,
+                            R.color.colorPriorityHigh
+                        ))
                 }
-                task_title.setText(task.title)
-                task_detail.setText(task.detail)
+                PriorityLevel.Medium.ordinal ->{
+                    task_priority_list_item.setBackgroundColor(
+                        ContextCompat.getColor(containerView.context,
+                            R.color.colorPriorityMedium
+                        ))
+                }
+                else ->  task_priority_list_item.setBackgroundColor(
+                    ContextCompat.getColor(containerView.context,
+                        R.color.colorPriorityLow
+                    ))
             }
+            task_title_list_item.text = task.title
+            task_detail_list_item.text = task.detail
         }
     }
 }
