@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Admin/AndroidProjs/TaskManager/app/src/main/res/layout/activity_main.xml" value="0.1358695652173913" />
+        <entry key="..\:/Admin/AndroidProjs/TaskManager/app/src/main/res/layout/fragment_task_detail.xml" value="0.22" />
+        <entry key="..\:/Admin/AndroidProjs/TaskManager/app/src/main/res/layout/fragment_task_list.xml" value="0.17391304347826086" />
+        <entry key="..\:/Admin/AndroidProjs/TaskManager/app/src/main/res/layout/list_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Admin/AndroidProjs/TaskManager/app/src/main/res/layout/tag_list.xml" value="0.17391304347826086" />
+        <entry key="..\:/Admin/AndroidProjs/TaskManager/app/src/main/res/menu/menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/Admin/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Admin/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.17028985507246377" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

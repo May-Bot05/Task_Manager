@@ -3,16 +3,23 @@ package com.example.taskmanager.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskmanager.R
 import com.example.taskmanager.data.PriorityLevel
 import com.example.taskmanager.data.Task
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.fragment_task_detail.*
 import kotlinx.android.synthetic.main.list_item.task_priority_list_item
 import kotlinx.android.synthetic.main.list_item.*
+import timber.log.Timber
+import java.lang.reflect.Type
 
 class TaskAdapter(private val listener: (Long) -> Unit):
     ListAdapter<Task, TaskAdapter.ViewHolder>(
@@ -37,6 +44,7 @@ class TaskAdapter(private val listener: (Long) -> Unit):
             itemView.setOnClickListener{
                 listener.invoke(getItem(adapterPosition).id)
             }
+            Timber.plant(Timber.DebugTree())
         }
 
         fun bind(task: Task){
@@ -60,6 +68,7 @@ class TaskAdapter(private val listener: (Long) -> Unit):
             }
             task_title_list_item.text = task.title
             task_detail_list_item.text = task.detail
+            textViewCategory.text = task.category
         }
     }
 }

@@ -73,10 +73,9 @@
         android:id="@+id/priority_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/priority"
         app:layout_constraintStart_toStartOf="@+id/task_detail_task_detail"
-        app:layout_constraintTop_toBottomOf="@+id/task_detail_task_detail" />
+        app:layout_constraintTop_toTopOf="@+id/task_priority_task_detail" />
 
     <Spinner
         android:id="@+id/task_priority_task_detail"
@@ -84,10 +83,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/priority_label"
-        app:layout_constraintTop_toBottomOf="@+id/task_detail_task_detail" />
+        app:layout_constraintTop_toBottomOf="@+id/tag_task_detail" />
 
     <RadioGroup
         android:id="@+id/status_group"
@@ -114,5 +114,66 @@
             android:layout_marginLeft="16dp"
             android:text="@string/status_closed" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/category_task_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Category"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/task_detail_task_detail"
+        app:layout_constraintStart_toStartOf="@+id/task_detail_task_detail"
+        app:layout_constraintTop_toBottomOf="@+id/task_detail_task_detail" />
+
+    <ListView
+        android:id="@+id/tag_list_task_detail"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_task" />
+
+    <Button
+        android:id="@+id/buttonEnetrTag"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Add Tag"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:backgroundTint="#C0C0C0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_task_detail" />
+
+    <EditText
+        android:id="@+id/tag_task_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Enter Tag"
+        android:inputType="text"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEnetrTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonEnetrTag" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

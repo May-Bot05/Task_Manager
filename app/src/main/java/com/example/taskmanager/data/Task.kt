@@ -22,5 +22,7 @@ data class Task(
     val title: String,
     val detail: String,
     @ColumnInfo(name = "task_priority") val taskPriority: Int,
-    val status: Int
+    val status: Int,
+    val category: String?,
+    @ColumnInfo(name = "tags")val tagList: String?
 )
